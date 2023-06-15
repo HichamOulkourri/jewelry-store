@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet exemple</title>
+    <link rel="stylesheet" href="client/utilitaires/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="client/ressources/css/style.css">
+    <link rel="stylesheet" href="client/ressources/css/style2.css">
+    <script src="client/utilitaires/jquery-3.6.3.min.js"></script>
+    <script src="client/utilitaires/jquery-ui.js"></script>
+    <script src="client/utilitaires/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="client/ressources/js/global.js"></script>
+    <script src="client/connexion/requetes.js"></script>
+    <script src="client/membre/requetes.js"></script>
+    <script src="client/produit/requetes.js"></script>
+    <script src="client/produit/vues.js"></script>
+    
+  
+</head>
+<body onLoad="lister('index');">
+    <!-- Menu de navigation -->
+   
+                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="#!"> 
+            <img class="logo" src="client/ressources/images/logo.jpg">
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                  <li class="nav-item"> <a id="dm" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalEnreg" href="#">Devenir
+                    membre</a></li>
+                  <li class="nav-item"><a id="co" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalConnexion"
+                    href="#">Connexion</a></li>
+
+                 
+              </ul>
+              <form class="d-flex">
+                
+              </form>
+          </div>
+      </div>
+  </nav>
+                  
+              
+    <p id="msg3"></p>
+
+    <!-- section-3 products  BEst Sellers-->
+<section data-scroll-section id="products" class="products">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-content text-center">
+            <h2 data-scroll-direction="horizontal" data-scroll data-scroll-speed="1">Meilleures ventes</h2>
+            <p data-scroll-direction="horizontal" data-scroll data-scroll-speed="2">Les bracelets en perles, en particulier les bracelets de perles d'eau douce, ont également connu un grand succès ces dernières années. Les perles sont considérées comme des bijoux classiques et intemporels, et leur aspect naturel et organique en fait un choix parfait pour les femmes qui cherchent à ajouter une touche d'élégance subtile à leur look quotidien.</p>
+          </div>
+          <div class="col-12">
+        
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="jwellery" role="tabpanel" aria-labelledby="jwellery-tab">
+                <div class="row">
+
+                 <div id="contenu1"> </div>
+
+
+                 
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- section-3 products End 
+     
+<div class="container">
+    <div id="contenu1"></div> -- Lister les Produits disponibles -->
+    <!-- Modal Enregistrer -->
+    <div class="modal fade" id="modalEnreg" tabindex="-1" aria-labelledby="ModalEnregLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalEnregLabel">Nouveau membre</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" id="formEnreg">
+                        <div class="col-md-4">
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" name="prenom" value="" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="nom" name="nom" value="" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="courriel" class="form-label">Courriel</label>
+                            <input type="email" class="form-control" id="courriel" name="courriel" value="" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pass" class="form-label">Mot Passe</label>
+                            <input type="password" class="form-control" id="pass" name="pass" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cpass" class="form-label">Confirmer mot passe</label>
+                            <input type="password" class="form-control" id="cpass" name="cpass" required>
+                        </div>
+                        <span class="msgFormEnreg">Pour des raison statistiques</span>
+                        <div class="form-check mb-3">
+                            <input type="radio" class="form-check-input" id="feminin" value="F" name="sexe">
+                            <label class="form-check-label" for="feminin">Féminin</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="radio" class="form-check-input" id="masculin" value="M" name="sexe">
+                            <label class="form-check-label" for="masculin">Masculin</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="radio" class="form-check-input" id="autre" value="A" name="sexe">
+                            <label class="form-check-label" for="autre">Autre</label>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="date" class="form-label">Date de naissance</label>
+                            <input type="date" class="form-control" id="datenaissance" name="datenaissance">
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="button" onClick="enregistrer();">Enregister</button>
+                            <p id="msg1"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Connexion -->
+    <div class="modal fade" id="modalConnexion" tabindex="-1" aria-labelledby="ModalConnexionLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalConnexionLabel">Connexion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" id="formConnexion">
+                        <div class="col-md-4">
+                            <label for="courriel" class="form-label">Courriel</label>
+                            <input type="email" class="form-control" id="courrielc" name="courrielc" value="" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pass" class="form-label">Mot Passe</label>
+                            <input type="password" class="form-control" id="passc" name="passc" required>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="button" onClick="connexion();">Connexion</button>
+                        </div>
+                        <p id="msg2"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dragindex" class="toast-container posToast">
+        <div id="toast" class="toast  align-items-center text-white bg-danger border-0" data-bs-autohide="false"
+            role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="client/ressources/images/message.png" width=24 height=24 class="rounded me-2" alt="message">
+                <strong class="me-auto">Messages</strong>
+                <small class="text-muted"></small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div id="textToast" class="toast-body">
+                <!-- texte du Toast -->
+            </div>
+        </div>
+    </div>
+</div><!-- container -->
+
+
+<footer data-scroll-section>
+    <div class="footer py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-md-start text-center text-lg-start"> 
+            <div class="footer-logo text-muted mb-3 mb-md-0"> 
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This page is made with by <a href="" target="_blank"> Hicham Oulkourri</a>
+            </div>
+          </div>
+          <div class="col-md-6 text-center text-lg-end">
+            <div class="footer-social pt-1">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-dribbble"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+</body>
+</html>

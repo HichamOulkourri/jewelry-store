@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membre</title>
+    <link rel="stylesheet" href="../utilitaires/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../utilitaires/icons-1.8.1/bootstrap-icons.css">
+    <link rel="stylesheet" href="../ressources/css/style.css">
+    <link rel="stylesheet" href="panier.css">
+    <link rel="stylesheet" href="../ressources/css/style2.css">
+    <script src="../utilitaires/jquery-3.6.3.min.js"></script>
+    <script src="../utilitaires/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../utilitaires/jquery.twbsPagination.min.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="../ressources/js/global.js"></script>
+    <script src="../produit/requetes.js"></script>
+    <script src="../produit/vues.js"></script>
+    <script src="panier.js"></script>
+</head>
+<body onLoad="afficherNombreArticlesPanier(); lister('membre');">
+<!-- Menu de navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a id="idmt" class="navbar-brand" href="#">Membres</a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              
+                <li class="nav-item">
+                    <a id="pr" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalEnreg" href="#">Profil</a>
+                </li>
+                <li class="nav-item">
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <a id="pa" class="nav-link" href="javascript:afficherPanier();"><i class="bi bi-cart panierPlus"></i></a>
+    <span id="nbart">(0)</span>
+    <a id="bdc" class="nav-link" href="../../index.html"><i class="bi bi-forward-fill deconnexion"></i></a>
+</nav>
+<!-- Fin de menu de navigation 
+<br><br><br>
+<div class="container" id="contenu1"></div>-->
+
+
+<section data-scroll-section id="products" class="products">
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-content text-center">
+            <h2 data-scroll-direction="horizontal" data-scroll data-scroll-speed="1">Bienvenue </h2>
+            <p data-scroll-direction="horizontal" data-scroll data-scroll-speed="2">Les bijoux pour femme sont des accessoires intemporels qui peuvent compléter une tenue ou faire une déclaration de style audacieuse. Des boucles d'oreilles scintillantes aux colliers élégants en passant par les bracelets et les bagues.</p>
+          </div>
+          <div class="col-12">
+        
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="jwellery" role="tabpanel" aria-labelledby="jwellery-tab">
+                <div class="row">
+
+                 <div id="contenu1"> </div>
+
+
+                 
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<!-- Modal du panier -->
+<div class="modal fade" id="idModPanier" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="contenuPanier"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

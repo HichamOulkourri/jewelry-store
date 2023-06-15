@@ -1,0 +1,92 @@
+.bg-perso {
+    background-color:aqua;
+}
+
+.dropdown {
+    float: right !important;
+    padding-right: 20px;
+}
+
+.msgFormEnreg {
+    color: red !important;
+    font-size: 11px !important;
+}
+
+.panierPlus {
+    float: right;
+    font-size: 24px !important;
+    margin-right: -8px;
+}
+
+#bdc {
+    margin-right: 30px;
+}
+
+#nbart {
+    margin-left: -8px;
+}
+
+.deconnexion {
+    float: right;
+    color: grey;
+    font-size: 30px !important;
+    cursor: pointer;
+}
+
+.closeBtn {
+    color: red;
+    cursor: pointer;
+}
+
+.bgcolorFacture {
+    background-color: #bbabab !important;
+}
+
+#payer {
+    margin-left: 10px;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.maCard {
+    margin-top: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.liadmin {
+    color: white;
+}
+
+.liadmin:hover {
+    color: yellow;
+}
+
+#msgEnreg{
+    color:red;
+}
+
+.style-cards {
+    margin: 5px;
+    padding: 2px;
+}
+
+.posToast {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.logo {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+}
